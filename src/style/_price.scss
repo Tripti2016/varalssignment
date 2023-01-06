@@ -1,0 +1,114 @@
+@import './variable';
+
+
+.price {
+    h1 {
+        @include fontFormet($textColor1);
+        line-height: 130%;
+        font-size: 30px;
+        text-align: center;
+        width: 60%;
+        margin: auto;
+        font-family: 2;
+
+        span {
+            @include linear-gradient();
+            color: $textColor3;
+            padding: .25rem;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    }
+
+    .price-content-box {
+        @include flexCenter(row, center, space-around);
+        margin-top: 3rem;
+        gap: 1rem;
+
+        .price-content-box1 {
+            height: auto;
+            padding: 1rem;
+            border-radius: 15px;
+
+            h3 {
+                @include fontFormet($textColor1);
+                line-height: 120%;
+                font-size: 20px;
+                width: 60%;
+                font-family: $font-family2;
+                font-weight: 500;
+            }
+            h2 {
+                @include fontFormet($textColor2);
+                line-height: 120%;
+                font-size: 25px;
+                font-family: $font-family2;
+                width: 100%;
+                letter-spacing: .5px;
+                margin: .5rem 0;
+                span{
+                    font-size: 20px;
+                    color: $textColor5;
+                    margin: .5rem 0; 
+                }
+            }
+            p{
+                @include fontFormet($textColor5);
+                line-height: 120%;
+                font-size: 18px;
+                width: 100%;
+                font-family: $font-family2; 
+                margin: .5rem 0; 
+            }
+            ul{
+                li{
+                    display: flex;
+                    list-style: none;
+                    align-items: center;
+                    margin: .25rem;
+                    a,svg{
+                        padding: .5rem 0;
+                        font-family: $font-family2;
+                        font-size: 18px;
+                        color: $textColor2;
+                        font-weight: 500;
+                        text-decoration: none;
+
+                    }
+                }
+            }
+            button{
+                @include button($textColor5);
+                background-color: none;
+                width: 70%;
+                margin: auto;
+                font-family: $font-family2;
+                margin-left: 12px;
+            }
+
+        }
+
+        .active-box{
+            background-color: $textColor1;
+            padding: 2.5rem;
+            h3,h2,h2>span,ul>li>a,ul>li>svg,p{
+                color: $textColor3;
+                button{
+                    background-color: $textColor3;
+                    color:$textColor2 ;
+                   
+                }
+            }
+        }
+
+    }
+}
+
+@media screen and (max-width: 500px){
+    
+    .price{
+        h1{
+            width: 100%;
+        }
+    }
+    }

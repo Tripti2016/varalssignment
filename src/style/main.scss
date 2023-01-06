@@ -1,0 +1,16 @@
+@import './variable';
+@import './header';
+@import './services';
+@import './price';
+@import './aboutUs';
+@import './navBar.scss';
+@import './footer';
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.sectionPadding{
+    padding: 4rem;
+}

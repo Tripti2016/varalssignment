@@ -1,0 +1,120 @@
+
+@import './variable';
+
+.navBar {
+padding: 2rem;
+    @include flexCenter(row, center, space-between);
+
+    h2 {
+        font-size: 20px;
+        font-family: $font-family1;
+        color: $textColor1;
+
+        span {
+            background-color: $textColor1;
+            border-radius: 50%;
+            padding: 9px 3px;
+            color: $textColor3;
+        }
+    }
+
+    .navRight {
+        ul.link-container {
+            @include flexCenter(row, center, center);
+
+li{list-style: none;
+                padding: .5rem;
+
+          a {
+                
+                font-family: $font-family1;
+                font-size: 20px;
+                text-decoration: none;
+                color: $textColor1;
+                margin: 0 .5rem;
+                font-weight: 500;
+
+
+            }
+}
+            button {
+                @include button($textColor3);
+                @include linear-gradient();
+
+            }
+        }
+
+
+
+
+    }
+    
+.navbar-menu{
+    display: none;
+}
+
+}
+
+@media screen and (max-width: 900px) {
+    ul.link-container {
+    opacity: 0;
+    width: 0
+    }
+    .navbar-menu{
+        display: block !important;
+    }
+    
+    .navbar-menu {
+        @include flexCenter(column,center,center);
+    //    display: block;
+        // height: auto;
+        padding: 1rem;
+        
+      
+      
+ svg{
+            font-size: 30px;
+            font-weight: 600;
+            color: $textColor2;
+           
+        }
+        ul{
+            height: 200px;
+            @include linear-gradient2();
+            padding: 1rem;
+
+        li{
+            list-style: none;
+            padding: .5rem;
+            a{
+ 
+                font-family: $font-family1;
+                font-size: 20px;
+                text-decoration: none;
+                color: $textColor1;
+               
+                font-weight: 500;
+                text-align: center
+
+            }
+           
+        }
+        button {
+            @include button($textColor3);
+            @include linear-gradient();
+
+        }}
+    }
+}
+@media screen and (max-width: 600px) {
+   
+    .navbar-menu{
+        display: block;
+    }
+
+   .navbar-menu_container {
+        top: 20px;
+    }
+
+   
+}

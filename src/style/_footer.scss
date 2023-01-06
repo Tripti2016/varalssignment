@@ -1,0 +1,119 @@
+@import './variable';
+
+
+.footer{
+    width: 100vw;
+   
+    .footer-content{
+        width: 100%;
+        @include linear-gradient();
+        padding: 1rem ;
+        @include flexCenter(column,center,space-around);
+
+    h2{
+        @include fontFormet($textColor3);
+        font-family: $font-family2;
+        font-size: 25px;
+       
+    }
+    .footer-content-box{
+        padding: 1rem;
+        display: grid;
+       
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        // grid-gap: 20px;
+        .footer-content-box1{
+            width: 100%;
+            h3{
+                @include fontFormet($textColor3);
+                font-family: $font-family2;
+                font-size: 20px;
+            }
+            ul>li,p{
+                list-style: none;
+                a{
+                    font-size: 18px;
+                    font-family: $font-family2;
+                    color: $textColor5;
+                    text-decoration: none;
+                    cursor: pointer;
+                }
+                font-size: 18px;
+                font-family: $font-family2;
+                color: $textColor5;
+                text-decoration: none;
+
+            }
+      
+
+        }
+    }
+    .footer-content-box2{
+        width: 100%;
+        @include flexCenter(row,center,space-around);
+        .input{
+            @include flexCenter(row,center,center);
+        input{
+            width: 300px;
+            height: 50px;
+            outline: none;
+            border: none;
+            border-radius: 6px 0 0 9px;
+            padding: 0 1rem;
+            font-size: 18px;
+            font-family: $font-family2;
+        }
+    svg{
+        color: $textColor5;
+        font-size: 45px;
+    cursor: pointer;
+    border: 2px solid $textColor3;
+    border-radius: 0px 12px 12px 0px;
+    &:hover{
+        color: $textColor3;
+    }
+
+    }}
+        ul{
+            @include flexCenter(row,center,space-around);
+            width: 10%;
+        li{
+            list-style: none;
+           
+            svg{
+                color: $textColor3;
+                font-size: 25px;
+                cursor: pointer;
+            }
+        }
+    }
+    }
+    
+
+}
+
+}
+
+@media screen and (max-width: 800px){
+    .footer 
+    .footer-content{
+        h2{
+            font-size: 20px;
+            line-height: 2rem;
+        }
+ .footer-content-box{
+    grid-template-columns: 1fr 1fr;
+ }
+ .footer-content-box2{
+flex-wrap: wrap !important;
+width: 50%;
+.input{
+    padding: 2rem 0;
+}
+ul{
+    width: 50%;
+}
+}
+}
+} 
+

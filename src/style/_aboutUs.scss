@@ -1,0 +1,157 @@
+@import './variable';
+
+.aboutUs{
+    .aboutUs-blogs{
+        @include flexCenter(column,center,space-around);
+        margin: 4rem 0;
+        width: 80%;
+        margin: auto;
+        padding-bottom: 3rem;
+        h2{
+          @include fontFormet($textColor1);
+          
+        }
+        .aboutUs-blog-box{
+            @include flexCenter(row,center,center);
+            gap: 30px;
+            
+            font-family: $font-family2;
+            margin-top: 20px;
+            
+            
+            .aboutUs-blog-box1{
+                width:30%;
+                box-shadow: $box-shadow;
+                border-radius: 10px;
+                height: 250px;
+                padding-left: 1rem;
+                text-align: center;
+                padding: 1rem;
+                
+                .icon{
+                   
+                   
+                    width: fit-content;
+                    border: 2px solid $textColor2;
+                    background-color: none;
+                    border-radius: 5px;
+                    margin: auto;
+                    margin-bottom: 20px;
+                
+
+                svg{
+                    width: 30px;
+                    height: 30px;
+                    background: $textColor1;
+                    color:$textColor3;
+                    margin: 1rem;
+                    padding: .5rem;
+                   border-radius: 5px;
+                    text-align: center;
+                    font-size: 25px;
+                    border: none;
+                    outline: none
+                   
+                }
+            }
+                h3{
+                    @include fontFormet($textColor2);
+                    line-height: 120%;
+                    span{
+                        color: $textColor5;
+                        cursor: pointer;
+                    }
+                }
+            }
+            .active-blog{
+                background-color:$textColor1 ;
+                h3,h3>span{
+                    color: $textColor3;
+                    
+                }
+                .icon{
+                    border: 2px solid $textColor3;
+                    svg{
+                        border-color: $textColor3;
+                        background-color: $textColor3;
+                        color: $textColor1;
+                    }
+
+                }
+            }
+        }
+    }
+    .review{
+    width:70% ;
+    margin: auto;
+    padding-top: 2rem;
+    height: auto;
+        .review-box{
+            .review-box1{
+                box-shadow: none;
+                p{
+                    @include fontFormet($textColor1);
+                    line-height: 120%;
+                    font-size: 20px;
+                    font-family: $font-family2;
+                    letter-spacing: 1px;
+                    span{
+                        font-size: 22px;
+                        color: $textColor2;
+                        line-height: 200%;
+                        text-decoration: underline;
+                        font-weight: 600;
+                    }
+                }
+                .icon{
+                    border-radius: 50%;
+
+                    svg{
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 1050px){
+.aboutUs{
+    .aboutUs-blogs{
+        .aboutUs-blog-box{
+        flex-wrap: wrap;
+        .aboutUs-blog-box1{
+            width: 50% !important;
+        }
+       
+    }
+    h2{
+        line-height: 2rem;
+        text-align: center;
+    }
+}
+}
+.review{
+    width: 100% !important;
+}
+
+}
+
+@media screen and (max-width: 500px){
+    .aboutUs{
+        .aboutUs-blogs{
+            .aboutUs-blog-box{
+            
+            .aboutUs-blog-box1{
+              
+                width: 85% !important;
+            }
+           
+        }
+       
+    }
+    }
+   
+    
+    }
